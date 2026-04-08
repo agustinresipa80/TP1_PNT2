@@ -6,19 +6,14 @@ const productos = [
   { id: 5, nombre: "Campera", precio: 9500, categoria: "Ropa" }
 ];
 
-// 1
-console.log(productos[0].nombre);
+const nombres = productos.map(p => p.nombre);
+console.log(nombres);
 
-// 2
-for (const producto of productos) {
-  console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
-}
+const ropa = productos.filter(p => p.categoria === "Ropa");
+console.log(ropa);
 
-// 3
-productos.forEach(producto => {
-  console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
-});
+const caros = productos.filter(p => p.precio > 3000);
+console.log(caros);
 
-
-
-
+const gorra = productos.find(p => p.nombre === "Gorra");
+console.log(gorra);
