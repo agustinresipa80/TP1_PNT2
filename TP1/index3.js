@@ -6,19 +6,10 @@ const productos = [
   { id: 5, nombre: "Campera", precio: 9500, categoria: "Ropa" }
 ];
 
+const hayMayor10000 = productos.some(p => p.precio > 10000);
+console.log(hayMayor10000);
 
-console.log(productos[0].nombre);
+const todosMayor1000 = productos.every(p => p.precio > 1000);
+console.log(todosMayor1000);
 
-
-for (const producto of productos) {
-  console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
-}
-
-
-productos.forEach(producto => {
-  console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
-});
-
-
-
-
+console.log(nombres.includes("Campera"));
